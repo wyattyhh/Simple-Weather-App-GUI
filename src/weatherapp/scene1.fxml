@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="childPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="951.0" style="-fx-background-color: #f4eeff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weatherapp.Scene1Controller">
+   <children>
+      <TableView fx:id="tableView" layoutX="112.0" layoutY="283.0" prefHeight="63.0" prefWidth="740.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="year" maxWidth="147.0" prefWidth="147.0" style="-fx-alignment: center;" text="Year" />
+          <TableColumn fx:id="tMax" maxWidth="147.0" prefWidth="147.0" style="-fx-alignment: center;" text="TMax" />
+            <TableColumn fx:id="tMin" maxWidth="147.0" prefWidth="147.0" style="-fx-alignment: center;" text="TMin" />
+            <TableColumn fx:id="airFo" maxWidth="147.0" prefWidth="147.0" style="-fx-alignment: center;" text="Total air frost days" />
+            <TableColumn fx:id="rainFl" maxWidth="147.0" prefWidth="147.0" style="-fx-alignment: center;" text="Total rainfall" />
+        </columns>
+      </TableView>
+      <Label layoutX="157.0" layoutY="346.0" prefHeight="17.0" prefWidth="308.0" text="TMax: Highest monthly mean maximum temperature" textFill="#00000073">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="346.0" prefHeight="17.0" prefWidth="300.0" text="TMin: Lowest monthly mean minimum temperature" textFill="#00000073">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="stationName" layoutX="40.0" layoutY="40.0" prefHeight="55.0" prefWidth="897.0" text="Label" wrapText="true">
+         <font>
+            <Font name="Futura Medium" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="hisBtn" layoutX="399.0" layoutY="427.0" mnemonicParsing="false" onAction="#loadScene2" stylesheets="@style.css" text="Historical Weather" textFill="WHITE">
+         <font>
+            <Font name="Helvetica Neue" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="396.0" layoutY="485.0" mnemonicParsing="false" onAction="#backToHomepage" stylesheets="@style.css" text="Back to Homepage" textFill="WHITE">
+         <font>
+            <Font name="Helvetica Neue" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
